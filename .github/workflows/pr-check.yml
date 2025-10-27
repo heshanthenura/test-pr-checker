@@ -26,7 +26,7 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.bot_token }}
           comment-author: ${{ steps.app-token.outputs.bot_name}}[bot]
-          no-closing-message: "Please reference an issue with closing keywords!"
+          no-closing-message: "Please reference an issue with closing keywords!\n"
           unchecked-boxes-message: "You must complete all checklist items."
           unchecked-box-group-message: "{group} group: {unchecked} of {all} boxes are unchecked."
           success-message: "All PR checks passed!"
