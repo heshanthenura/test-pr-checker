@@ -22,11 +22,11 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY }}
 
       - name: Check PR
-        uses: heshanthenura/pr-check-action@main
+        uses: heshanthenura/pr-check-action@feat/custom-messages
         with:
           token: ${{ steps.app-token.outputs.bot_token }}
           comment-author: ${{ steps.app-token.outputs.bot_name}}[bot]
-          no-closing-message: "Please reference an issue with closing keywords!\n"
+          no-closing-message: "Please reference an issue with closing keywords!"
           unchecked-boxes-message: "You must complete all checklist items."
           unchecked-box-group-message: "{group} group: {unchecked} of {all} boxes are unchecked."
           success-message: "All PR checks passed!"
